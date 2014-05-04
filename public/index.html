@@ -1,0 +1,71 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <!--song template-->
+	<script type="text/template" class="song-template">
+	<% _.each(songs, function(thisSong){   %>
+		<div class="this_song" data-song="<%= thisSong.file %>">
+			<div class="song_file">
+				<audio data-song_number="<%= thisSong.file %>" src="files/<%= thisSong.file %>.mp4" controls loop></audio>
+				
+			</div>
+			<% _.each(thisSong.options, function(artist){   %>
+				<div class="artist_options" data-song="<%= thisSong.file %>" data-name="<%= artist %>"><%= artist %></div>
+			<% }); %>
+		</div>			
+	<% }); %>
+	</script>
+	
+	<!--start-->
+	<div class="start">
+		<button class="ready">ready</button>
+	</div>
+	
+	<!--game-->
+	<div class="game">
+		<!--points-->
+		<div class="points">
+			<div class="mypoints">0</div>
+			<div class="opppoints">0</div>
+		</div>
+	</div>
+	
+	<!--end-->
+	<div class="end">
+		<div class="win">
+			<h1>you win!</h1>
+		</div>
+		<div class="tie">
+			<h1>it's a tie!</h1>
+		</div>
+		<div class="lose">
+			<h1>you lose!</h1>
+		</div>
+		<div class="quit">
+		<h1>you win!</h1>
+		<h2>by default...you're opponent quit.</h2>
+		</div>
+	</div>
+
+
+	<!--block-->
+	<div class="block">
+		<h1>you snooze, you loose! sorry!</h1>
+	</div>
+
+    
+
+
+
+
+<script src="js/bower_components/jquery/dist/jquery.js"></script>
+<script src="js/bower_components/underscore/underscore.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/sockets.js"></script>
+<script src="js/game.js"></script>
+
+</body>
+</html>

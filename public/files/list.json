@@ -1,0 +1,82 @@
+ [
+ 
+ {"file" : "0",
+ "artists" : ["Adele", "Britney Spears"],
+ "related" : ["Amy Winehouse", "Duffy", "Nelly Furtado", "Spice Girls", "Christina Aguilera", "Katy Perry"],
+ "link" : "http://youtu.be/fKyb3UXLXJg"},
+
+ {"file" : "1",
+ "artists" : ["Lorde", "The Beatles"],
+ "related" : ["Ellie Goulding", "Ladyhawke", "Lana Del Ray", "The Rolling Stones", "The Beach Boys", "Simon & Garfunkel"],
+ "link" : "http://youtu.be/zlIQTudMsTk"},
+
+ {"file" : "2",
+ "artists" : ["Lynyrd Skynard", "Will Smith"],
+ "related" : ["Ted Nugent", "The Allman Brothers Band", "The Black Crowes", "Kris Kross", "House Of Pain", "Coolio"],
+ "link" : "http://youtu.be/bGKKzh-B7bc"},  
+
+ {"file" : "3",
+ "artists" : ["Nelly", "Bee Gees"],
+  "related" : ["Chingy", "J-Kwon", "Ja Rule", "B52s", "KC & The Sunshine Band", "Hall & Oates"],
+ "link" : "http://youtu.be/-tlhMRoNJrs"},
+
+ {"file" : "4",
+ "artists" : ["Rich Boy", "Hall & Oates"],
+ "related" : ["Chingy", "DJ Khaled", "Juvenile", "The Police", "Fitz & The Tantrums", "Kenny Loggins"],
+ "link" : "http://youtu.be/HOhmslk3rCg"},
+
+ {"file" : "5",
+ "artists" : ["Robin Thicke", "Rolling Stones"],
+ "related" : ["Justin Timberlake", "Jamie Foxx", "John Newman", "The Beatles", "The Velvet Underground", "The Who"],
+ "link" : "http://youtu.be/BHz6sfYr_Pc"},
+  
+ {"file" : "6",
+ "artists" : ["Snoop Dogg", "AC/DC"],
+ "related" : ["Xzibit", "Ice Cube", "Nate Dogg", "Black Sabath", "Motely Crue", "Van Halen"],
+ "link" : "http://youtu.be/AW5heY_UBxQ"},
+  
+
+ {"file" : "7",
+ "artists" : ["Ellie Goulding", "Lil Wayne"],
+ "related" : ["Lana Del Ray", "Florence & The Machine", "Amy Winehouse", "Birdman", "Young Money", "Lil Jon"],
+ "link" : "http://youtu.be/20S5dPbtMzI"},
+   
+
+ {"file" : "8",
+ "artists" : ["Queen", "Amy Winehouse"],
+ "related" : ["The Who", "Deep Purple", "Pink Floyd", "Ellie Goulding", "Lily Allen", "Janelle Monáe"],
+ "link" : "http://youtu.be/FPz-4pnj0cI"}, 
+ 
+  {"file" : "9",
+ "artists" : ["Daft Punk", "Bob Marley"],
+ "related" : ["LCD Soundsystem", "Avicii", "the Chemical Brothers", "Peter Tosh", "Snoop Lion", "Eek-A-Mouse"],
+ "link" : "http://youtu.be/o5QIVUypQdc"}, 
+ 
+  {"file" : "10",
+ "artists" : ["NAS", "Black Sabath"],
+ "related" : ["Gang Starr", "Ghostface Killah", "2Pac", "Guns 'N Roses", "Van Halen", "Rush"],
+ "link" : "http://youtu.be/1ej2rvQMVwg"}, 
+
+ {"file" : "11",
+ "artists" : ["The Beatles", "Shaggy"],
+ "related" : ["The Kinks", "The Mamas & The Papas", "The Rolling Stones", "Coolio", "Beenie Man", "Afroman"],
+ "link" : "http://youtu.be/XSTH-9h4tN8"},   
+
+  {"file" : "12",
+ "artists" : ["The Police", "Kanye West"],
+ "related" : ["U2", "The Cars", "Foreigner", "Jay Z", "Kendrick Lamar", "Lil Wayne"],
+ "link" : "http://youtu.be/AjoRAZDQxQo"}, 
+ 
+  {"file" : "13",
+ "artists" : ["Ray Parker Jr.", "Psy"],
+ "related" : ["Rick Astley", "The Buggles", "Kenny Loggins", "LMFAO", "Se7en", "Dbsk"],
+ "link" : "http://youtu.be/82LCKBdjywQ"}, 
+ 
+  {"file" : "14",
+ "artists" : ["M83", "Kanye West"],
+ "related" : ["Cut Copy", "The xx", "Yeasayer", "Schoolboy Q", "Ludacris", "Rihanna"],
+ "link" : "http://youtu.be/_uEKLAmqxWY"}
+
+ 
+ ]
+ 

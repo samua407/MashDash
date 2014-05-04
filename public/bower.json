@@ -1,0 +1,24 @@
+{
+  "name": "Super Mash Bros",
+  "version": "0",
+  "homepage": "na",
+  "authors": [
+    "samua407 <samua407@newschool.edu>"
+  ],
+  "description": "Guess the artists singing the mash up faster than your friends to win.",
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.6.0",
+    "jquery": "~2.1.1",
+    "socket.io": "~0.9.15"
+  }
+}

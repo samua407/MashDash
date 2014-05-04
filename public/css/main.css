@@ -1,0 +1,61 @@
+
+.old {
+	display: none;
+}
+
+.game {
+	display: none;
+}
+
+.this_song{
+	display: none;
+}
+
+.song_file {
+	display: none;
+}
+
+.show {
+	display: inline;
+}
+
+.points {
+	width: 150px;
+	height: 50px;
+}
+
+.mypoints {
+	background-color: red;
+	width: 70px;
+	height: 50px;
+	float: left;
+	color: white;
+}
+
+.opppoints {
+	background-color: blue;
+	width: 70px;
+	height: 50px;
+	float: right;
+	color: white;
+}
+
+.end {
+	display: none;
+}
+
+.win {
+	display: none;
+}
+
+.lose {
+	display: none;
+}
+
+.tie {
+	display: none;
+}
+
+.block {
+	display: none;
+}
