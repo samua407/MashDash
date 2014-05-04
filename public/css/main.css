@@ -1,61 +1,466 @@
+/* @override http://localhost:5000/css/main.css */
 
-.old {
+@font-face{
+	font-family: Cody;
+	src: url(codystar.ttf);
+}
+
+body {
+	background-color:  black;
+}
+
+.wrapper {
+	width: 700px;
+	height: 425px;
+	margin: 10px auto;
+	background: url(img/dj.jpg) -125px 1px white;
+	-moz-box-shadow: 0 0 1px #c7bcbc;
+	box-shadow: 0 0 1px #c7bcbc;
+	opacity: 1;
+}
+
+
+.welcome {
+	position:  relative;
+	width:  80%;
+	margin-left:  10%;
+	color:  #a4b6d9;
+	font: small-caps 15px "Cody", sans-serif;
+	text-align: center;
+	text-shadow: 0 0 1px #c50000;
+}
+
+.logo {
+	margin-top: 50px;
+}
+
+.ready{
+	position:  fixed;
+	margin-left: 12%;
+	display:  none;
+}
+
+.readyClick {
+	color:  #a4b6d9;
+	font:  50px "Cody", sans-serif;
+	margin: 150px;
+	
+	cursor: pointer;
+	-moz-box-shadow: 0 0 1px #180000;
+	box-shadow: 0 0 1px #180000;
+	padding: 10px 10px 15px 14px;
+}
+
+.waiting {
+	position:  fixed;
+	width: 450px;
+	left: 19%;
+	top:  75px;
+	color:  #a4b6d9;
+	display:  none;
+
+}
+
+	.waiting h1{
+		font: small-caps 50px "Cody", sans-serif;
+		text-align: center;
+	}
+	
+	.waiting h2{
+		font: small-caps 25px "Cody", sans-serif;
+		text-align: center;
+	}
+
+.countdown {
+	position:  fixed;
+	width: 450px;
+	left: 150px;
+	top:  20px;
+	color:  #a4b6d9;	
 	display: none;
+	
+}
+
+.countdown h1 {
+	font: small-caps 40px "Cody", sans-serif;
+	text-align: center;
+}
+
+.countdown h2 {
+	font: small-caps 250px "Cody", sans-serif;
+	text-align: center;
+	margin-top:  -40px;
+	color:  #a4b6d9;
+	text-shadow: 0 0 6px #000000;
 }
 
 .game {
 	display: none;
 }
 
-.this_song{
-	display: none;
-}
+	.song {
+		width:  60%;
+		height: 100%;
+		margin: -50px auto;
+		
+	}
+	
+	.this_song{
+		text-align: center;	
+		display: none;
+	}
+	
+	.artist_options {
+		margin-top:  25px;
+	}
+	
+	.artist_options a{
+		width:  auto;
+		cursor:  pointer;
+		padding: 5px;
+		text-decoration:  none;
 
-.song_file {
-	display: none;
-}
+		font: 15px "Cody", sans-serif;
+		color:  #a4b6d9;
+		
+		-moz-box-shadow: 2px 2px 4px #000000;
+		box-shadow: 2px 2px 4px #000000;
+		border-style: solid;
+		border-width: 1px;
+	}
+	
+	.artist_options a:hover{
+		opacity: 0.54;
+	}
 
-.show {
-	display: inline;
-}
+	.song_file {
+		display: none;
+		border-style: none;
+	}
+	
+	.show {
+		display: inline;
+	}
+	
+	.points {
+		width: 95%;
+		margin:  0px auto;
+		color:  #a4b6d9;
+		height: 50px;
 
-.points {
-	width: 150px;
-	height: 50px;
-}
-
-.mypoints {
-	background-color: red;
-	width: 70px;
-	height: 50px;
-	float: left;
-	color: white;
-}
-
-.opppoints {
-	background-color: blue;
-	width: 70px;
-	height: 50px;
-	float: right;
-	color: white;
-}
+	}
+	
+	.mypoints_label{
+		width: 20%;
+		float: left;
+		font:  small-caps 23px Cody, sans-serif;		
+		text-align: left;
+	}
+	
+	.mypoints {
+		width: 20%;
+		float: left;
+		font: small-caps 55px Cody, sans-serif;
+		text-align: left;
+		clear: left;
+	}
+	
+	.opppoints_label{
+		width: 20%;
+		float: right;
+		font:  small-caps 23px Cody, sans-serif;		
+		text-align: right;
+		margin-top: -27px;
+	}
+	
+	
+	.opppoints {
+		width: 20%;
+		float: right;
+		font: small-caps 55px Cody, sans-serif;
+		text-align: right;
+	}
 
 .end {
 	display: none;
+	position:  fixed;
+	width:  60%;
+	margin-left: 20%;
 }
 
-.win {
-	display: none;
-}
+	.end h1{
+		margin-top: 50px;
+		font:  small-caps 100px Cody, sans-serif;		
+		color:  #a4b6d9;
+		text-align: center;
+	}
 
-.lose {
-	display: none;
-}
-
-.tie {
-	display: none;
-}
+	.end h2{
+		font:  small-caps 23px Cody, sans-serif;		
+		color:  #a4b6d9;
+		text-align: center;
+	}
+	
+	.win {
+		display: none;
+	}	
+	
+	.lose {
+		display: none;
+	}
+	
+	.tie {
+		display: none;
+	}
+	
+	.quit {
+		display:  none;
+	}
 
 .block {
+/* @override http://localhost:5000/css/main.css */
+
+
+@font-face{
+	font-family: Action;
+	src: url(action.ttf);
+}
+
+@font-face{
+	font-family: Cody;
+	src: url(codystar.ttf);
+}
+
+body {
+	background-color:  black;
+}
+
+.wrapper {
+	width: 700px;
+	height: 425px;
+	margin: 10px auto;
+	background: url(img/dj.jpg) -125px 1px white;
+	-moz-box-shadow: 0 0 1px #c7bcbc;
+	box-shadow: 0 0 1px #c7bcbc;
+	opacity: 1;
+}
+
+
+.welcome {
+	position:  relative;
+	width:  80%;
+	margin-left:  10%;
+	color:  #a4b6d9;
+	font: small-caps 15px "Cody", sans-serif;
+	text-align: center;
+	text-shadow: 0 0 1px #c50000;
+	cursor: pointer;
+	display:  none;
+}
+
+.logo {
+	margin-top: 50px;
+}
+
+.ready{
+	position:  fixed;
+	width: 72%;
+	margin-left: 13%;
+	display:  none;
+}
+
+.readyClick {
+	color:  #a4b6d9;
+	font:  50px "Cody", sans-serif;
+	margin: 150px;
+	
+	cursor: pointer;
+	border-style: solid;
+	-moz-box-shadow: 0 0 1px #180000;
+	box-shadow: 0 0 1px #180000;
+	padding: 10px 10px 15px 14px;
+}
+
+.waiting {
+	position:  fixed;
+	width: 450px;
+	left: 150px;
+	top:  75px;
+	color:  #a4b6d9;
+	display:  none;
+
+}
+
+	.waiting h1{
+		font: small-caps 50px "Cody", sans-serif;
+		text-align: center;
+	}
+	
+	.waiting h2{
+		font: small-caps 25px "Cody", sans-serif;
+		text-align: center;
+	}
+
+.countdown {
+	position:  fixed;
+	width: 450px;
+	left: 150px;
+	top:  20px;
+	color:  #a4b6d9;	
 	display: none;
+	
+}
+
+.countdown h1 {
+	font: small-caps 40px "Cody", sans-serif;
+	text-align: center;
+}
+
+.countdown h2 {
+	font: small-caps 250px "Cody", sans-serif;
+	text-align: center;
+	margin-top:  -40px;
+	color: white;
+	text-shadow: 0 0 6px #000000;
+}
+
+.game {
+	display: none;
+}
+
+	.song {
+		width:  60%;
+		height: 100%;
+		margin: -50px auto;
+		
+	}
+	
+	.this_song{
+		text-align: center;	
+		display: none;
+	}
+	
+	.artist_options {
+		margin-top:  25px;
+	}
+	
+	.artist_options a{
+		width:  auto;
+		cursor:  pointer;
+		padding: 5px;
+		text-decoration:  none;
+
+		font: 15px "Cody", sans-serif;
+		color:  #a4b6d9;
+		
+		-moz-box-shadow: 2px 2px 4px #000000;
+		box-shadow: 2px 2px 4px #000000;
+		border-style: solid;
+		border-width: 1px;
+	}
+	
+	.artist_options a:hover{
+		opacity: 0.54;
+	}
+
+	.song_file {
+		display: none;
+		border-style: none;
+	}
+	
+	.show {
+		display: inline;
+	}
+	
+	.points {
+		width: 95%;
+		margin:  0px auto;
+		
+		height: 50px;
+
+	}
+	
+	.mypoints_label{
+		width: 20%;
+		float: left;
+		color: white;
+		font:  small-caps 23px Cody, sans-serif;		
+		text-align: left;
+	}
+	
+	.mypoints {
+		width: 20%;
+		float: left;
+		color:  white;
+		font: small-caps 55px Cody, sans-serif;
+		text-align: left;
+		clear: left;
+	}
+	
+	.opppoints_label{
+		width: 20%;
+		float: right;
+		color: white;
+		font:  small-caps 23px Cody, sans-serif;		
+		text-align: right;
+		margin-top: -27px;
+	}
+	
+	
+	.opppoints {
+		width: 20%;
+		float: right;
+		color:  white;
+		font: small-caps 55px Cody, sans-serif;
+		text-align: right;
+	}
+
+.end {
+	display: none;
+	position:  fixed;
+	width:  60%;
+	margin-left: 20%;
+}
+
+	.end h1{
+		margin-top: 50px;
+		font:  small-caps 100px Cody, sans-serif;		
+		color:  #a4b6d9;
+		text-align: center;
+	}
+
+	.end h2{
+		font:  small-caps 23px Cody, sans-serif;		
+		color:  #a4b6d9;
+		text-align: center;
+	}
+	
+	.win {
+		display: none;
+	}	
+	
+	.lose {
+		display: none;
+	}
+	
+	.tie {
+		display: none;
+	}
+	
+	.quit {
+		display:  none;
+	}
+
+.tooLate {
+	
+	position:  fixed;
+	width:  60%;
+	margin-left: 20%;
+	display: none;
+}
+
+.tooLate h1{
+	font:  small-caps 100px Cody, sans-serif;		
+	color:  #a4b6d9;
+	text-align: center;
 }

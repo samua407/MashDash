@@ -19,29 +19,40 @@ var readyUsers = 0;
 
 io.set('log level', 2); // showing only significant log such as handshaking and data transmission
 
-io.sockets.on('connection', function(socket) { // when a user, "socket" connects
 
+
+// when a user, "socket" connects
+io.sockets.on('connection', function(socket) { 
+	
+	//define socket.id for this connection
+	var who = JSON.stringify(socket.id);
+		
+	//add to online users
 	onlineUsers++;
 	
+	//if there's more than 2 online users, block out future users.
 	if(onlineUsers > 2){
-		util.log('### sorry, too late');
 		socket.emit('blockUser', {});
 	}else{
 		util.log('number of user: ' + onlineUsers);
-		io.sockets.emit('users', onlineUsers); // emit to all
 	};
 
-	socket.on('userReady', function(){
-		console.log('## user ready');
+
+	//when user clicks 'ready'
+	socket.on('userReadyClicked', function(){
 		
 		readyUsers++;
-		
-		if(readyUsers == 2){
+		var len = readyUsers;
+						
+		//if one user, waiting. if two, play.
+		if(len == 2){
 			io.sockets.emit('usersReady', {});
 			readyUsers = 0;
-		}else{
-			console.log(readyUsers, " ready user(s).");
+		}if(len == 1){
+			socket.emit('userWaiting', {});
 		};
+
+
 		
 	});
 	socket.on('updateScore', function(data) {
@@ -75,10 +86,16 @@ io.sockets.on('connection', function(socket) { // when a user, "socket" connects
 		console.log(data);
 	});
 	socket.on('disconnect', function() {
-		onlineUsers--; // reduce user count
+		//reduce online users
+		onlineUsers--;
+		
+		//tell opponent other person quit
 		io.sockets.emit('quitter', {});
+		
+		//log stats
 		util.log('the user #' + socket.id + ' has just disconnected');
-		util.log('number of user: ' + onlineUsers);
+		util.log('number of users: ' + onlineUsers);
+		util.log('number of READY users: ' + readyUsers.length);
 	});
 
 

@@ -13,48 +13,75 @@
 				
 			</div>
 			<% _.each(thisSong.options, function(artist){   %>
-				<div class="artist_options" data-song="<%= thisSong.file %>" data-name="<%= artist %>"><%= artist %></div>
+				<div class="artist_options" data-song="<%= thisSong.file %>" data-name="<%= artist %>"><a href><%= artist %></a></div>
 			<% }); %>
 		</div>			
 	<% }); %>
 	</script>
 	
-	<!--start-->
-	<div class="start">
-		<button class="ready">ready</button>
-	</div>
-	
-	<!--game-->
-	<div class="game">
-		<!--points-->
-		<div class="points">
-			<div class="mypoints">0</div>
-			<div class="opppoints">0</div>
-		</div>
-	</div>
-	
-	<!--end-->
-	<div class="end">
-		<div class="win">
-			<h1>you win!</h1>
-		</div>
-		<div class="tie">
-			<h1>it's a tie!</h1>
-		</div>
-		<div class="lose">
-			<h1>you lose!</h1>
-		</div>
-		<div class="quit">
-		<h1>you win!</h1>
-		<h2>by default...you're opponent quit.</h2>
-		</div>
-	</div>
+	<div class = "wrapper">
+		<!--start-->
+		<div class="welcome">
+			<img class="logo" src="css/img/logo.png">
+			<h2>Guess the two artists used in the mashup to score points. The player with the most points after 15 songs wins.</h2>
 
-
-	<!--block-->
-	<div class="block">
-		<h1>you snooze, you loose! sorry!</h1>
-	</div>
+		</div>
+		
+		<!-- ready? -->
+		<div class="ready">
+			<div class="readyClick">ready?</div>
+		</div>
+		
+		<!-- waiting for other player -->
+		<div class="waiting">
+			<h1>stand by...</h1>
+			<h2> we're finding another player brave<br>enough to take you on.</h2>
+		</div>
+		
+		<!-- countdown -->
+		<div class="countdown">
+			<h1>it's on in</h1>
+			<h2>3</h2>
+		</div>
+		
+		<!--play-->
+		<div class="game">
+			<!--points-->
+			<div class="points">
+				<div class="mypoints_label">you</div>
+				<div class="mypoints">0</div>
+				<div class="opppoints_label">them</div>
+				<div class="opppoints">0</div>
+			</div>
+			<div class="song"></div>
+		</div>
+		
+		<!--final-->
+		<div class="end">
+			<div class="win">
+				<h1>you win</h1>
+				<h2>you're kind of a big deal.</h2>
+			</div>
+			<div class="tie">
+				<h1>it's a tie</h1>
+				<h2>tk tk tk tk</h2>
+			</div>
+			<div class="lose">
+				<h1>you lose</h1>
+				<h2>that sucks.</h2>
+			</div>
+			<div class="quit">
+				<h1>you win</h1>
+				<h2>by default...your opponent quit.</h2>
+			</div>
+		</div>
+	
+			<!--block-->
+		<div class="tooLate">
+<!-- 			<h1>you snooze, you loose! sorry!</h1> -->
+		</div>
+		
+	</div> <!--end wrapper-->
 
     
 

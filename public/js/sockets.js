@@ -11,15 +11,27 @@ window.onload = function() {
 	socket.on('message',function(data){
 	    console.log(data);
 	});
+/*
 	socket.on('users',function(data){
-	    game.levels.num_players = data;
+	    game.playState.num_players = data;
 	});
-	socket.on('usersReady', function(data){
-
-		console.log('users ready');
-		game.levels.load_first();
+*/
+	
+	//--queue players
+	socket.on('userWaiting', function(){
+		console.log('only one user ready.');
+		game.playState.waiting();	
 		
+	});
+	
+	socket.on('usersReady', function(data){
+		console.log('both users ready!');
+		game.playState.countdown();
 	});	
+
+
+
+
 	socket.on('newScore', function(data){
 		game.play.add_point(data);
 	});
@@ -41,26 +53,26 @@ window.onload = function() {
 		game.play.go_to_level(data.num);	
 	});
 	socket.on('gameOver', function(){
-		game.levels.load_winner();
+		game.playState.load_winner();
 	});
 	socket.on('blockUser', function(){
 		
 		$('.start').remove();
 		$('.game').remove();
-		$('.block').fadeIn('fast');
+		$('.tooLate').show();
 		
 	});
 	socket.on('quitter', function(){
 		var check = $('.show');
 		console.log(check);
 		if(check.length > 0){
-			game.levels.load_winByDefault();
+			game.playState.load_winByDefault();
 		};
 	});
 	
 	//--loose coupling from app
 	game.events.subscribe('user:ready', function(){
-		socket.emit('userReady', {num : 1});
+		socket.emit('userReadyClicked', {});
 	});
 	game.events.subscribe('points:score', function(el){		
 		socket.emit('updateScore', {

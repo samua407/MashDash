@@ -80,7 +80,7 @@ game.songs = (function(){
 		feedSrc = list();
 		template = $('.song-template').text();
 		renderFeed = _.template(template);		
-		$(renderFeed({songs : feedSrc })).appendTo('.game');	
+		$(renderFeed({songs : feedSrc })).appendTo('.song');	
 			
 	};
 	
@@ -138,7 +138,8 @@ game.play = (function(){
 	
 	var click_listener = function(){
 	
-		$('.artist_options').click(function(){
+		$('.artist_options').click(function(e){
+			e.preventDefault();
 			click_manager(this);
 		});	
 		
@@ -276,23 +277,70 @@ game.play = (function(){
 })();
 
 //--levels manager
-game.levels = (function(){
+game.playState = (function(){
 	
 	var num_players,
 		ready_players = 0;
 	
-	var start = function(){
 	
-		$('.ready').click(function(){
+	//welcome screen
+	var landing = function(){
+		
+		$('.welcome').click(function(){
+			$('.welcome').hide();
+			$('.ready').show();
+			readyCheck();
+			
+		});
+		
+	};
+	
+	//load ready screen
+	var readyCheck = function(){
+		console.log('ready check!');
+		$('.readyClick').click(function(){
 			game.events.publish('user:ready', '');
-			console.log('ready');
 		});
 	};
 	
-	var load_first = function(){
+	//if click ready and first user, go to waiting screen
+	var waiting = function(){
+	
+		$('.ready').hide();
+		$('.waiting').show();
+		
+	};
 
-		$('.start').fadeOut();
-		$('.game').fadeIn();
+	//if both users ready, load countdown and call firstSong after 3 seconds	
+	var countdown = function(){
+		
+		$('.start').hide();
+		$('.ready').hide();
+		$('.waiting').hide();
+		$('.countdown').show();
+
+		setTimeout(function(){
+			$('.countdown h2').empty().text('2');
+		}, 1*1000)
+		
+		setTimeout(function(){
+			$('.countdown h2').empty().text('1');
+		}, 2*1000)
+		
+		setTimeout(function(){
+			$('.countdown h2').empty().text('0');
+		}, 3*1000)
+		
+		setTimeout(function(){
+			$('.countdown').hide();
+			game.playState.firstSong();
+		}, 4*1000)
+		
+	};
+
+	//begin gameplay with firstSong	
+	var firstSong = function(){
+		$('.game').show();
 		var first = $('.this_song')[0];
 		$(first).toggleClass('show');
 		game.songs.play();
@@ -326,14 +374,18 @@ game.levels = (function(){
 		$('.quit').fadeIn();
 	};
 	
-	start();
+	landing();
+	//firstSong();
 	
 	return {
 		num_players : num_players,
 		ready_players : ready_players,
-		load_first : load_first,
+		waiting : waiting,
+		countdown : countdown,
+		firstSong : firstSong,
 		load_winner : load_winner,
 		load_winByDefault : load_winByDefault,
 	}
 	
+
 })();
